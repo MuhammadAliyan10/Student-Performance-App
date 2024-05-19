@@ -1,0 +1,31 @@
+.search__box .input__box input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--accent-color);
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.input__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searched__result h4 {
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.searched__result span {
+  color: var(--accent-color);
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-left: 2rem;
+}
+.searched__result p {
+  color: var(--secondary-color);
+}
+.single_search {
+  margin-bottom: 1rem;
+}

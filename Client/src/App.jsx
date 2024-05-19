@@ -1,15 +1,20 @@
-import { useState } from "react";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./Components/Sidebar";
+import Home from "./Pages/Home";
+import Standing from "./Pages/Standing";
+import Search from "./Pages/Search";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <BrowserRouter>
       <Sidebar />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/standing" element={<Standing />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
