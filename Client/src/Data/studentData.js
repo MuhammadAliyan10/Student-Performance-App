@@ -30,7 +30,7 @@ const studentData = [
         otherActivity: 100,
       },
     },
-    sgpa: 3.91,
+    sgpa: 3.41,
   },
   {
     id: 2,
@@ -106,11 +106,11 @@ const studentData = [
     GPA: {
       "semester-1": {
         gpa: 3.78,
-        attendance: 0,
-        assignment: 0,
-        projects: 0,
-        quiz: 0,
-        otherActivity: 0,
+        attendance: 100,
+        assignment: 87,
+        projects: 70,
+        quiz: 70,
+        otherActivity: 70,
       },
       "semester-2": {
         gpa: 3.56,
@@ -131,6 +131,138 @@ const studentData = [
     },
     sgpa: 3.1,
   },
+  {
+    id: 5,
+    fullName: "Hashir Abdullah",
+    regNumber: "BCS07223021",
+    currentSemester: 3,
+    GPA: {
+      "semester-1": {
+        gpa: 3.86,
+        attendance: 100,
+        assignment: 87,
+        projects: 70,
+        quiz: 70,
+        otherActivity: 70,
+      },
+      "semester-2": {
+        gpa: 3.85,
+        attendance: 80,
+        assignment: 20,
+        projects: 40,
+        quiz: 0,
+        otherActivity: 0,
+      },
+      "semester-3": {
+        gpa: 3.87,
+        attendance: 80,
+        assignment: 30,
+        projects: 40,
+        quiz: 90,
+        otherActivity: 0,
+      },
+    },
+    sgpa: 3.78,
+  },
+  {
+    id: 6,
+    fullName: "Hafiz Muhammad Zubair",
+    regNumber: "BCS07223044",
+    currentSemester: 3,
+    GPA: {
+      "semester-1": {
+        gpa: 3.56,
+        attendance: 100,
+        assignment: 87,
+        projects: 70,
+        quiz: 70,
+        otherActivity: 70,
+      },
+      "semester-2": {
+        gpa: 3.4,
+        attendance: 80,
+        assignment: 20,
+        projects: 40,
+        quiz: 0,
+        otherActivity: 0,
+      },
+      "semester-3": {
+        gpa: 3.1,
+        attendance: 80,
+        assignment: 30,
+        projects: 40,
+        quiz: 90,
+        otherActivity: 0,
+      },
+    },
+    sgpa: 3.2,
+  },
+  {
+    id: 7,
+    fullName: "Noman Aslam",
+    regNumber: "BCS07223012",
+    currentSemester: 3,
+    GPA: {
+      "semester-1": {
+        gpa: 3.56,
+        attendance: 100,
+        assignment: 87,
+        projects: 70,
+        quiz: 70,
+        otherActivity: 70,
+      },
+      "semester-2": {
+        gpa: 3.22,
+        attendance: 80,
+        assignment: 20,
+        projects: 40,
+        quiz: 0,
+        otherActivity: 0,
+      },
+      "semester-3": {
+        gpa: 3.12,
+        attendance: 80,
+        assignment: 30,
+        projects: 40,
+        quiz: 90,
+        otherActivity: 0,
+      },
+    },
+    sgpa: 3.22,
+  },
+  {
+    id: 8,
+    fullName: "Zaeem Jutt",
+    regNumber: "BCS07223112",
+    currentSemester: 3,
+    GPA: {
+      "semester-1": {
+        gpa: 3.0,
+        attendance: 100,
+        assignment: 87,
+        projects: 70,
+        quiz: 70,
+        otherActivity: 70,
+      },
+      "semester-2": {
+        gpa: 1.5,
+        attendance: 80,
+        assignment: 20,
+        projects: 40,
+        quiz: 0,
+        otherActivity: 0,
+      },
+      "semester-3": {
+        gpa: 2.5,
+        attendance: 80,
+        assignment: 30,
+        projects: 40,
+        quiz: 90,
+        otherActivity: 0,
+      },
+    },
+    sgpa: 2.31,
+  },
 ];
 
 function calculateProgress(
@@ -141,14 +273,12 @@ function calculateProgress(
   quiz,
   otherActivity
 ) {
-  // Calculate the percentage of the total scores (assignment, attendance, projects, quiz, otherActivity)
   const totalScores = assignment + attendance + projects + quiz + otherActivity;
-  const maxTotalScores = 500; // Maximum possible total score
+  const maxTotalScores = 500;
   const percentage = (totalScores / maxTotalScores) * 100;
 
   const progress = percentage * (gpa / 4);
 
-  // Ensure progress is within 0-100 range
   return progress;
 }
 

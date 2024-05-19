@@ -10,7 +10,7 @@ const Home = () => {
         <div className="whole__report">
           <div className="row">
             <div className="col-sm-9">
-              <ProgressChart />
+              <ProgressChart user={0} />
             </div>
           </div>
         </div>

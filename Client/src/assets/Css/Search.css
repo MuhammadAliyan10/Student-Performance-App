@@ -1,5 +1,5 @@
 .search__box .input__box input {
-  width: 100%;
+  width: 80%;
   outline: none;
   border: 1px solid var(--secondary-color);
   color: var(--accent-color);

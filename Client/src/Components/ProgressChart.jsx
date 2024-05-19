@@ -24,8 +24,8 @@ ChartJS.register(
 
 import studentData from "../Data/studentData.js";
 
-const ProgressChart = () => {
-  const { progress } = studentData[0];
+const ProgressChart = ({ user }) => {
+  const { progress } = studentData[user];
 
   const progressValues = Object.values(progress);
   const labels = Object.keys(progress).map(

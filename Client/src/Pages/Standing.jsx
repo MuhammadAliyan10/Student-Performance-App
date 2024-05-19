@@ -1,53 +1,20 @@
 import React, { useEffect, useState } from "react";
 import studentData from "../Data/studentData";
 import "../assets/Css/Standing.css";
+import { ascendingStanding, descendingStanding } from "../Algorithm/QuickSort";
 const Standing = () => {
   const [standing, setStanding] = useState(false);
   const [sortedRanking, setSortedRanking] = useState([]);
-  const ascendingStanding = (studentArray) => {
-    if (studentArray.length <= 1) {
-      return studentArray;
+  const rank = (index) => {
+    if (index == 1) {
+      return "1st";
+    } else if (index == 2) {
+      return "2nd";
+    } else if (index == 3) {
+      return "3rd";
+    } else {
+      return index + "th";
     }
-    let pivot = studentArray[0];
-    let lesserArray = [];
-    let greaterArray = [];
-
-    for (let i = 1; i < studentArray.length; i++) {
-      if (studentArray[i].sgpa <= pivot.sgpa) {
-        lesserArray.push(studentArray[i]);
-      } else {
-        greaterArray.push(studentArray[i]);
-      }
-    }
-
-    return [
-      ...ascendingStanding(lesserArray),
-      pivot,
-      ...ascendingStanding(greaterArray),
-    ];
-  };
-  const descendingStanding = (studentArray) => {
-    if (studentArray.length <= 1) {
-      return studentArray;
-    }
-
-    let pivot = studentArray[0];
-    let lesserArray = [];
-    let greaterArray = [];
-
-    for (let i = 1; i < studentArray.length; i++) {
-      if (studentArray[i].sgpa >= pivot.sgpa) {
-        lesserArray.push(studentArray[i]);
-      } else {
-        greaterArray.push(studentArray[i]);
-      }
-    }
-
-    return [
-      ...descendingStanding(lesserArray),
-      pivot,
-      ...descendingStanding(greaterArray),
-    ];
   };
   useEffect(() => {
     if (!standing) {
@@ -84,7 +51,7 @@ const Standing = () => {
           </div>
           {sortedRanking.map((student, index) => (
             <div className="table__row" key={student.id}>
-              <p>{index + 1}</p>
+              <p>{rank(index + 1)}</p>
               <p>{student.fullName}</p>
               <p>{student.regNumber}</p>
               <p>{student.sgpa.toFixed(2)}</p>

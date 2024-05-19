@@ -25,6 +25,7 @@
 }
 .sidebar__content ul li {
   padding: 10px 12px;
+
   display: flex;
   justify-content: start;
   align-items: center;

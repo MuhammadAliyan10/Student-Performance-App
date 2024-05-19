@@ -26,7 +26,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <i className="fa-solid fa-square-poll-vertical"></i>
-                <a href="">GPA</a>
+                <Link to={"/history"}>History</Link>
               </li>
             </ul>
           </div>
