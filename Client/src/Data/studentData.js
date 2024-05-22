@@ -309,6 +309,12 @@ studentData.forEach((student) => {
       student.GPA["semester-3"].otherActivity
     ),
   };
+  student.totalProgress =
+    ((student.progress["semester1"] +
+      student.progress["semester2"] +
+      student.progress["semester3"]) /
+      300) *
+    100;
 });
 
 export default studentData;

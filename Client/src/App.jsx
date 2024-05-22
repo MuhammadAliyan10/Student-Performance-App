@@ -4,6 +4,7 @@ import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
 import Standing from "./Pages/Standing";
 import Search from "./Pages/Search";
+import Message from "./Pages/Message";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/standing" element={<Standing />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/history" element={<History />} />
+        <Route path="/message" element={<Message />} />
       </Routes>
     </BrowserRouter>
   );

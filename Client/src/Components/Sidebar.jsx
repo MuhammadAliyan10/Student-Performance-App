@@ -21,12 +21,12 @@ const Sidebar = () => {
                 <Link to="/standing">Standing</Link>
               </li>
               <li>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
                 <Link to="/search">Search</Link>
               </li>
               <li>
-                <i className="fa-solid fa-square-poll-vertical"></i>
-                <Link to={"/history"}>History</Link>
+                <i className="fa-solid fa-message"></i>
+                <Link to={"/message"}>Message</Link>
               </li>
             </ul>
           </div>

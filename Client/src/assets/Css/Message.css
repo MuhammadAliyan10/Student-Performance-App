@@ -1,0 +1,28 @@
+.message__box {
+  width: 100%;
+  height: auto;
+  border: 1px solid #474545;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.notification ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.notification ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem;
+}
+.notification ul li i {
+  color: red;
+  margin-right: 10px;
+}
+.notification ul li p {
+  margin: 0;
+  font-size: 15px;
+}
