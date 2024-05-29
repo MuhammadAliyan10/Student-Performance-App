@@ -3,8 +3,11 @@ import "../assets/Css/Search.css";
 import studentData from "../Data/studentData";
 import BinarySearch from "../Algorithm/BinarySearch";
 import { Stack } from "../Algorithm/Stack";
+import { useStudentContext } from "../Context/StudentContext";
+import { Link } from "react-router-dom";
 
 const Search = () => {
+  const { currentUser } = useStudentContext();
   const [lastSearches, setLastSearches] = useState(new Stack(100));
   const [search, setSearch] = useState("");
   const [searchedStudent, setSearchedStudent] = useState([]);
@@ -37,8 +40,8 @@ const Search = () => {
   };
 
   return (
-    <div className="search">
-      <div className="container">
+    <div className="container">
+      <div className="search">
         <h3>Search</h3>
         <div className="search__box my-5">
           <div className="input__box">
@@ -62,9 +65,14 @@ const Search = () => {
             {searchedStudent.map((student) => {
               return (
                 <div key={student.id} className="single_search">
-                  {}
                   <p>
-                    Name: <span>{student.fullName}</span>
+                    Name:{" "}
+                    <span>
+                      <Link to={`/userProfile/${student.id}`}>
+                        {student.fullName}
+                      </Link>
+                      {currentUser == student.id && " - You"}
+                    </span>
                   </p>
                   <p>
                     Registration Number: <span>{student.regNumber}</span>

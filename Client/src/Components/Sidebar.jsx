@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/Css/Sidebar.css";
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(false);
+  const [smallScreen, setSmallScreen] = useState(false);
+  useEffect(() => {
+    function checkSmallScreen() {
+      if (window.innerWidth < 800) {
+        setSmallScreen(true);
+      } else {
+        setSmallScreen(false);
+      }
+    }
+
+    checkSmallScreen();
+    window.addEventListener("resize", checkSmallScreen);
+    return () => {
+      window.removeEventListener("resize", checkSmallScreen);
+    };
+  }, []);
   const location = useLocation();
   return (
     <div className="row">
       <div className="col-sm-3">
-        <div className="sidebar">
+        <div className={open ? "sidebar close" : "sidebar"}>
+          <div className="sideBar__btn">
+            {smallScreen && (
+              <button onClick={() => setOpen(!open)}>
+                {!open ? (
+                  <i class="fa-solid fa-door-closed"></i>
+                ) : (
+                  <i class="fa-solid fa-door-open"></i>
+                )}
+              </button>
+            )}
+          </div>
           <h2 className="sidebar__main__heading">Dashboard</h2>
           <div className="sidebar__content">
             <ul>
@@ -35,7 +63,7 @@ const Sidebar = () => {
               <h3>User</h3>
               <li>
                 <i className="fa-solid fa-user"></i>
-                <a href="">Profile</a>
+                <Link to="/profile">Profile</Link>
               </li>
               <li>
                 <i className="fa-solid fa-circle-info"></i>

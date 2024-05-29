@@ -1,0 +1,21 @@
+.student__profile {
+  margin: 4rem 0rem;
+}
+.student__profile ul {
+  margin: 0;
+  padding: 0;
+}
+.student__profile ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+.student__profile ul li h5 {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+.student__profile ul li p {
+  margin-bottom: 0;
+}

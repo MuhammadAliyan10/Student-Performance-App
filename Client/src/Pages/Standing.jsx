@@ -3,6 +3,7 @@ import studentData from "../Data/studentData";
 import "../assets/Css/Standing.css";
 import { ascendingStanding, descendingStanding } from "../Algorithm/QuickSort";
 import { useStudentContext } from "../Context/StudentContext";
+import { Link } from "react-router-dom";
 const Standing = () => {
   const { currentUser } = useStudentContext();
   const [standing, setStanding] = useState(false);
@@ -60,7 +61,12 @@ const Standing = () => {
               <p className={currentUser == student.id ? "current__user" : ""}>
                 {rank(index + 1)}
               </p>
-              <p>{student.fullName}</p>
+              <p>
+                {" "}
+                <Link to={`/userProfile/${student.id}`}>
+                  {student.fullName}
+                </Link>
+              </p>
               <p>{student.regNumber}</p>
               <p>{student.sgpa.toFixed(2)}</p>
             </div>

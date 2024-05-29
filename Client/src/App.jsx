@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Standing from "./Pages/Standing";
 import Search from "./Pages/Search";
 import Message from "./Pages/Message";
+import UserProfile from "./Pages/UserProfile";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/standing" element={<Standing />} />
         <Route path="/search" element={<Search />} />
         <Route path="/message" element={<Message />} />
+        <Route path="/userProfile/:userId" element={<UserProfile />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </BrowserRouter>
   );

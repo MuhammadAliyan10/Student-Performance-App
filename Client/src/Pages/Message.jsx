@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "../assets/Css/Message.css";
 import studentData from "../Data/studentData";
 import Notification from "../Algorithm/Queue";
+import { useStudentContext } from "../Context/StudentContext";
 
 const Message = () => {
   const [notification, setNotification] = useState([]);
+  const { currentUser } = useStudentContext();
 
   useEffect(() => {
-    const student = studentData[6];
+    const student = studentData[currentUser];
     let notificationInstance = new Notification();
-    notificationInstance.sendLowGPANotifications(student, 2.5);
+    notificationInstance.sendLowGPANotifications(student, 2.51);
     notificationInstance.sendLowProgressNotifications(student, 50);
 
     const displayNotifications = async () => {
