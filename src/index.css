@@ -6,6 +6,17 @@
     padding: 10px 0px;
     z-index: 999;
   }
+  .sideBar__btn {
+    right: -30px;
+  }
+
+  .sideBar__btn button {
+    width: 30px;
+    height: 30px;
+  }
+  .sideBar__btn button i {
+    font-size: 14px;
+  }
   .sidebar__main__heading {
     margin: 1rem 0rem 2rem 0rem;
   }
@@ -42,6 +53,11 @@
   }
   .searched__result p {
     font-size: 13px;
+  }
+  .searched__result span {
+    font-size: 13px;
+
+    margin-left: 1rem;
   }
 }
 @media screen and (min-width: 668px) and (max-width: 819px) {

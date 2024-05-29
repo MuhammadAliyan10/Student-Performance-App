@@ -9,6 +9,7 @@ const Sidebar = () => {
     function checkSmallScreen() {
       if (window.innerWidth < 800) {
         setSmallScreen(true);
+        setOpen(true);
       } else {
         setSmallScreen(false);
       }
@@ -20,6 +21,11 @@ const Sidebar = () => {
       window.removeEventListener("resize", checkSmallScreen);
     };
   }, []);
+  const handleClickLink = () => {
+    if (smallScreen) {
+      setOpen(!open);
+    }
+  };
   const location = useLocation();
   return (
     <div className="row">
@@ -42,19 +48,27 @@ const Sidebar = () => {
               <h3>Main</h3>
               <li className={location.pathname == "/" ? "active" : ""}>
                 <i className="fa-solid fa-house"></i>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={handleClickLink}>
+                  Home
+                </Link>
               </li>
               <li className={location.pathname == "/standing" ? "active" : ""}>
                 <i className="fa-solid fa-trophy"></i>
-                <Link to="/standing">Standing</Link>
+                <Link to="/standing" onClick={handleClickLink}>
+                  Standing
+                </Link>
               </li>
               <li>
                 <i className="fa-solid fa-magnifying-glass"></i>
-                <Link to="/search">Search</Link>
+                <Link to="/search" onClick={handleClickLink}>
+                  Search
+                </Link>
               </li>
               <li>
                 <i className="fa-solid fa-message"></i>
-                <Link to={"/message"}>Message</Link>
+                <Link to={"/message"} onClick={handleClickLink}>
+                  Message
+                </Link>
               </li>
             </ul>
           </div>

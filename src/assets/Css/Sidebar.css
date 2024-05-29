@@ -81,6 +81,7 @@
 .sideBar__btn button {
   border: none;
   background-color: var(--sidebar-background);
+  color: var(--primary-color);
   width: 40px;
   height: 40px;
   border-radius: 0px 4px 4px 0px;

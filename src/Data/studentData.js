@@ -309,9 +309,7 @@ function calculateProgress(
   const totalScores = assignment + attendance + projects + quiz + otherActivity;
   const maxTotalScores = 500;
   const percentage = (totalScores / maxTotalScores) * 100;
-
   const progress = percentage * (gpa / 4);
-
   return progress;
 }
 
@@ -343,9 +341,9 @@ studentData.forEach((student) => {
     ),
   };
   student.totalProgress =
-    ((student.progress["semester1"] +
-      student.progress["semester2"] +
-      student.progress["semester3"]) /
+    ((student.progress.semester1 +
+      student.progress.semester2 +
+      student.progress.semester3) /
       300) *
     100;
 });
