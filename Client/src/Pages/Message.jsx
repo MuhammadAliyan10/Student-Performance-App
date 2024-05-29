@@ -32,7 +32,7 @@ const Message = () => {
                 return (
                   <ul key={index}>
                     <li>
-                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      <i className="fa-solid fa-triangle-exclamation"></i>
                       <p>{notify.message}</p>
                     </li>
                   </ul>

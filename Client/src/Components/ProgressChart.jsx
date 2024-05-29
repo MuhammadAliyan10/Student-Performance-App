@@ -23,9 +23,11 @@ ChartJS.register(
 );
 
 import studentData from "../Data/studentData.js";
+import { useStudentContext } from "../Context/StudentContext.jsx";
 
-const ProgressChart = ({ user }) => {
-  const { progress } = studentData[user];
+const ProgressChart = () => {
+  const { currentUser } = useStudentContext();
+  const { progress } = studentData[currentUser];
 
   const progressValues = Object.values(progress);
   const labels = Object.keys(progress).map(

@@ -1,6 +1,6 @@
 const studentData = [
   {
-    id: 1,
+    id: 0,
     fullName: "Muhammad Aliyan Nadeem",
     regNumber: "BCS07223017",
     currentSemester: 3,
@@ -33,7 +33,7 @@ const studentData = [
     sgpa: 3.41,
   },
   {
-    id: 2,
+    id: 1,
     fullName: "Usama Zulfiqar",
     regNumber: "BCS07223013",
     currentSemester: 3,
@@ -66,7 +66,7 @@ const studentData = [
     sgpa: 3.91,
   },
   {
-    id: 3,
+    id: 2,
     fullName: "Noor-ul-Ain",
     regNumber: "BCS07223056",
     currentSemester: 3,
@@ -99,7 +99,7 @@ const studentData = [
     sgpa: 2.51,
   },
   {
-    id: 4,
+    id: 3,
     fullName: "Mohsin Ikhlaq",
     regNumber: "BCS07223110",
     currentSemester: 3,
@@ -132,7 +132,7 @@ const studentData = [
     sgpa: 3.1,
   },
   {
-    id: 5,
+    id: 4,
     fullName: "Hashir Abdullah",
     regNumber: "BCS07223021",
     currentSemester: 3,
@@ -165,7 +165,7 @@ const studentData = [
     sgpa: 3.78,
   },
   {
-    id: 6,
+    id: 5,
     fullName: "Hafiz Muhammad Zubair",
     regNumber: "BCS07223044",
     currentSemester: 3,
@@ -198,7 +198,7 @@ const studentData = [
     sgpa: 3.2,
   },
   {
-    id: 7,
+    id: 6,
     fullName: "Noman Aslam",
     regNumber: "BCS07223012",
     currentSemester: 3,
@@ -231,7 +231,7 @@ const studentData = [
     sgpa: 3.22,
   },
   {
-    id: 8,
+    id: 7,
     fullName: "Zaeem Jutt",
     regNumber: "BCS07223112",
     currentSemester: 3,

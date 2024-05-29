@@ -62,6 +62,7 @@ const Search = () => {
             {searchedStudent.map((student) => {
               return (
                 <div key={student.id} className="single_search">
+                  {}
                   <p>
                     Name: <span>{student.fullName}</span>
                   </p>
